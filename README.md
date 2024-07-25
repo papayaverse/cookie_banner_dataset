@@ -63,8 +63,9 @@ The dataset contains the following columns:
 - **internal_buttons:** A dictionary containing the button labels and their respective actions from the internal cookie banner (if available).
 
 ## Files
-- **`url_data_s3_jul_23_24.csv`:** This CSV file contains the scraped data with columns for URL, banner text, and buttons.
-- **`lambda_function.py`:** Python code files for the AWS Lambda scraper functions used to collect the data.
+- **`cookie_banner_dataset_july_23_24.csv`:** This CSV file contains the scraped data with columns for URL, banner text, and buttons.
+- **`external_banner_scraper_lambda.py`:** Python code file for the AWS Lambda scraper functions used to collect the data for the external cookie banner.
+- **`internal_banner_lambda_scraper.py`:** Python file for the AWS Lambda scraper functions used to collect the data for the internal cookie banner.
 
 ## Usage
 Researchers can use this dataset to analyze cookie consent mechanisms, study user interaction with cookie banners, and develop new methods for managing cookie preferences.
