@@ -3,6 +3,29 @@
 ## Overview
 The Cookie Banner Dataset contains text and button data from cookie consent banners scraped from several hundred websites. This dataset is intended for researchers studying data privacy, user consent, and web interactions.
 
+## Cookie Banner Structure
+
+The structure of the dataset is such that it stores both the external and internal cookie banner data for a given website.
+This section explains the two parts to modern cookie banners.
+
+### External Banner
+
+This is the cookie banner present on the main webpage that the user first interacts with. Typically, it is small, does not cover the entire webpage, and has very few options, like "Accept All", "Manage Preferences", and "Reject All" at the maximum. Usually, it only has one or two options.
+
+Here is an example of an external banner.
+
+![external banner](externalbanner.png)
+
+
+## Internal Banner
+
+This refers to the cookie banner presented after the user clicks "manage my preferences" or an equivalent button. It typically contains more detailed options like "Marketing", "Performance" cookies and more, and sometimes even toggles regarding Share and Sale of Personal Information.
+
+Here is an example of an internal banner.
+
+![internal banner](internalbanner.png)
+
+
 ## Data Collection
 The data was collected using two scraper functions deployed on AWS Lambda. These functions were designed and implemented as part of a project for a Large Scale Computing class.
 
@@ -77,7 +100,7 @@ Below is an example of how to read the dataset using Python:
 import pandas as pd
 
 # Load the dataset
-data = pd.read_csv('url_data_s3_jul_23_24.csv')
+data = pd.read_csv('cookie_banner_dataset_july_23_24.csv')
 
 # Display the first few rows
 print(data.head())
